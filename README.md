@@ -27,6 +27,7 @@ name: Build and publish
 runs-on: ubuntu-18.04
 if: "!contains(github.event.head_commit.message, '[skip ci]')
 ```
+
 ---
 ### meta.yml
 
@@ -43,6 +44,7 @@ data_location: s3://ooi-data/CE01ISSM-MFD35-02-PRESFA000-recovered_host-presf_ab
 archive_location: ""
 source_provenance: https://raw.githubusercontent.com/ooi-data/CE01ISSM-MFD35-02-PRESFA000-recovered_host-presf_abc_dcl_tide_measurement_recovered/main/history/provenance.json
 ```
+
 ---
 ### config.yml
 
@@ -55,6 +57,7 @@ data_bucket: s3://ooi-data
 ```
 
 When refresh is true, a trigger should happen to kick off the request and data harvesting process, though process will not happen unless there is a change to the `request.yml` file.
+
 ---
 ### history/request.yml
 
@@ -71,6 +74,7 @@ response: https://raw.githubusercontent.com/ooi-data/CE01ISSM-MFD35-02-PRESFA000
 ```
 
 status: can be `success`, `pending`, `failed`
+
 ---
 ### history/process.yml
 
